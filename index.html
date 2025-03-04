@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spongebob Game</title>
+    <style>
+        @font-face {
+            font-family: 'SF Pro';
+            src: url('SF-Pro-Display-Regular.otf') format('opentype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        body {
+            font-family: 'SF Pro', sans-serif;
+            background-color: #f0f0f0; /* Solid background color */
+            color: #333;
+            text-align: center;
+            padding: 100px 20px;
+            margin: 0;
+        }
+        h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+            color: #ffcc00; /* Bright yellow color */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        label {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+            display: block;
+        }
+        select {
+            padding: 10px;
+            font-size: 1.2em;
+            border: 2px solid #ffcc00; /* Bright yellow border */
+            border-radius: 5px;
+            background-color: #fff;
+            color: #333;
+            cursor: pointer;
+            transition: background-color 0.3s, border-color 0.3s;
+        }
+        select:hover {
+            background-color: #ffeb3b; /* Light yellow on hover */
+            border-color: #ff9900; /* Darker yellow on hover */
+        }
+        option {
+            font-size: 1em;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Spongebob Game</h1>
+    <label for="gameSelect">Choose a game:</label>
+    <select id="gameSelect" onchange="navigateToGame()">
+        <option value="">--Select a number--</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+    </select>
+
+    <script>
+        function navigateToGame() {
+            const select = document.getElementById('gameSelect');
+            const value = select.value;
+            if (value) {
+                window.location.href = `${value}.html`;
+            }
+        }
+    </script>
+
+</body>
+</html>
